@@ -14,7 +14,7 @@ function sortProductsByPrice(products) {
     }
     return arr;
   }
-
+}
 
 // Test case
 const products = [
