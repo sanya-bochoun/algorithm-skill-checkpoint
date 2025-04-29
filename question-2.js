@@ -1,6 +1,7 @@
 function findProductPrice(products, name) {
   // Your code here
-}
+  
+
 
 // Test case
 const products = [
