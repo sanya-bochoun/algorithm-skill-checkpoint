@@ -1,6 +1,20 @@
 function sortProductsByPrice(products) {
   // Your code here
-}
+  const arr = products.slice()
+  const n = arr.length
+
+  for(let i = 0; i < n; i++) {
+    for(let j = 0; j < n - 1 - i; j++) {
+      if (arr[j].price > arr[j + 1].price) {
+
+        const tmp = arr[j]
+        arr[j] = arr[j] + 1
+        arr[j + 1] = tmp
+      }
+    }
+    return arr;
+  }
+
 
 // Test case
 const products = [
@@ -9,6 +23,7 @@ const products = [
   { name: "Cherry", price: 2.5 },
   { name: "Date", price: 1.5 },
 ];
+
 console.log(sortProductsByPrice(products));
 
 // Output: [
